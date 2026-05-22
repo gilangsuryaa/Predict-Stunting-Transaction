@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIPredict - Platform Prediksi Pintar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<nav>
+    <a href="#home" class="nav-logo">
+        <span class="nav-logo-icon"><i class="ti ti-sparkles" aria-hidden="true"></i></span>
+        AIPredict
+    </a>
+    <div class="nav-links">
+        <a href="#about">Tentang</a>
+        <a href="#features">Fitur</a>
+        <a href="#tools">Prediksi</a>
+        <a href="#contact">Kontak</a>
+    </div>
+    <a href="#tools" class="nav-cta">Mulai Prediksi</a>
+</nav>
+
+<main>
+    <!-- HERO -->
+    <section id="home" class="hero">
+        <div class="hero-eyebrow">
+            <i class="ti ti-sparkles" aria-hidden="true"></i>
+            Unified AI Prediction Platform
+        </div>
+        <h1>Prediksi risiko & pertumbuhan dalam satu tempat</h1>
+        <p>Platform prediksi berbasis machine learning untuk deteksi transaksi fraud dan screening status gizi balita — cepat, bersih, dan mudah dipahami.</p>
+        <div class="hero-stats">
+            <div class="stat-card"><strong>2</strong><span>Prediction tools</span></div>
+            <div class="stat-card"><strong>ML</strong><span>Model based</span></div>
+            <div class="stat-card"><strong>Fast</strong><span>Quick result</span></div>
+        </div>
+        <div class="hero-cta-group">
+            <a href="#tools" class="btn-primary">Coba Sekarang</a>
+            <a href="#about" class="btn-secondary">Pelajari Brand</a>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about-section">
+        <div class="section-center">
+            <p class="eyebrow">Tentang Brand</p>
+            <h2>AIPredict membantu membaca sinyal penting dari data sederhana.</h2>
+            <p class="section-desc">Website ini menyatukan dua kebutuhan prediksi yang berbeda: keamanan transaksi digital dan pemantauan pertumbuhan anak. Tujuannya adalah membuat proses analisis awal lebih rapi, modern, dan mudah digunakan.</p>
+        </div>
+        <div class="about-grid">
+            <article class="about-card">
+                <i class="ti ti-scan" aria-hidden="true"></i>
+                <h3>Screening Awal</h3>
+                <p>Memberikan indikasi awal agar pengguna dapat menentukan langkah berikutnya dengan lebih cepat.</p>
+            </article>
+            <article class="about-card">
+                <i class="ti ti-layout-dashboard" aria-hidden="true"></i>
+                <h3>Satu Platform</h3>
+                <p>Dua model prediksi digabung dalam satu website dengan navigasi yang sederhana dan konsisten.</p>
+            </article>
+            <article class="about-card">
+                <i class="ti ti-badge-check" aria-hidden="true"></i>
+                <h3>Hasil Mudah Dibaca</h3>
+                <p>Output prediksi dilengkapi keterangan dan rekomendasi agar hasilnya lebih informatif.</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features" class="features-section">
+        <div class="features-inner">
+            <div class="features-left">
+                <p class="eyebrow">Fitur Website</p>
+                <h2>Dua alat prediksi, satu desain yang fokus.</h2>
+                <p class="section-desc">AIPredict memakai palet warna hangat dan layout bersih agar pengguna langsung fokus ke data input dan hasil prediksi.</p>
+            </div>
+            <div class="features-list">
+                <div class="feature-item">
+                    <span class="feature-num">01</span>
+                    <h3>Fraud Transaction Detection</h3>
+                    <p>Menganalisis data transaksi seperti nominal, negara user, negara kartu, channel, dan verifikasi keamanan.</p>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-num">02</span>
+                    <h3>Stunting Growth Prediction</h3>
+                    <p>Membaca estimasi status pertumbuhan balita dari umur, jenis kelamin, dan tinggi badan.</p>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-num">03</span>
+                    <h3>Recommendation Output</h3>
+                    <p>Setiap hasil dilengkapi ringkasan analisis dan saran tindak lanjut yang relevan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TOOLS -->
+    <section id="tools" class="tools-section">
+        <div class="section-center">
+            <p class="eyebrow">Prediction Tools</p>
+            <h2>Mulai prediksi dari data yang kamu punya.</h2>
+            <p class="section-desc">Pilih jenis prediksi, isi form, lalu lihat hasil analisis awal di bawah form.</p>
+        </div>
+
+        <div class="switcher-wrap">
+            <button class="switcher-btn active" data-target="fraud" type="button">
+                <i class="ti ti-shield-check" aria-hidden="true"></i>
+                Fraud Transaction
+            </button>
+            <button class="switcher-btn" data-target="stunting" type="button">
+                <i class="ti ti-baby-carriage" aria-hidden="true"></i>
+                Stunting Growth
+            </button>
+        </div>
+
+        <!-- FRAUD PANEL -->
+        <div class="tool-panel active" id="panel-fraud">
+            <div class="tool-header">
+                <div class="tool-header-icon"><i class="ti ti-shield-check" aria-hidden="true"></i></div>
+                <div class="tool-header-text">
+                    <p class="label">Tool 01</p>
+                    <h2>Deteksi Transaksi Fraud</h2>
+                </div>
+            </div>
+
+            <form id="transactionForm" action="/predict/transaction" method="post" novalidate class="form-body">
+
+                <div class="form-section-title">
+                    <i class="ti ti-user-circle" aria-hidden="true"></i>Informasi Akun
+                </div>
+
+                <div class="field">
+                    <label for="account_age_days">Umur Akun</label>
+                    <div class="input-wrap">
+                        <input type="number" id="account_age_days" name="account_age_days" placeholder="contoh: 500" min="1" max="10000" required autocomplete="off">
+                        <span class="input-suffix">hari</span>
+                    </div>
+                    <p class="field-hint">Umur akun dalam hari (1 – 10.000)</p>
+                    <p class="field-err" id="err-account-age"></p>
+                </div>
+
+                <div class="grid-2">
+                    <div class="field">
+                        <label for="total_transactions_user">Total Transaksi</label>
+                        <div class="input-wrap">
+                            <input type="number" id="total_transactions_user" name="total_transactions_user" placeholder="contoh: 15" min="0" max="5000" required autocomplete="off">
+                            <span class="input-suffix">trx</span>
+                        </div>
+                        <p class="field-err" id="err-total-transactions"></p>
+                    </div>
+                    <div class="field">
+                        <label for="avg_amount_user">Rata-rata Nominal</label>
+                        <div class="input-wrap">
+                            <input type="number" id="avg_amount_user" name="avg_amount_user" placeholder="contoh: 100.50" step="0.01" min="0" max="1000000" required autocomplete="off">
+                            <span class="input-suffix">USD</span>
+                        </div>
+                        <p class="field-err" id="err-avg-amount"></p>
+                    </div>
+                </div>
+
+                <div class="form-section-title">
+                    <i class="ti ti-credit-card" aria-hidden="true"></i>Detail Transaksi
+                </div>
+
+                <div class="grid-2">
+                    <div class="field">
+                        <label for="amount">Nominal Transaksi</label>
+                        <div class="input-wrap">
+                            <input type="number" id="amount" name="amount" placeholder="contoh: 55.00" step="0.01" min="0" max="1000000" required autocomplete="off">
+                            <span class="input-suffix">USD</span>
+                        </div>
+                        <p class="field-err" id="err-amount"></p>
+                    </div>
+                    <div class="field">
+                        <label for="shipping_distance_km">Jarak Pengiriman</label>
+                        <div class="input-wrap">
+                            <input type="number" id="shipping_distance_km" name="shipping_distance_km" placeholder="contoh: 250.75" step="0.01" min="0" max="50000" required autocomplete="off">
+                            <span class="input-suffix">km</span>
+                        </div>
+                        <p class="field-err" id="err-shipping"></p>
+                    </div>
+                </div>
+
+                <div class="grid-2">
+                    <div class="field">
+                        <label for="country">Negara Pengguna</label>
+                        <select id="country" name="country" required class="sel">
+                            <option value="">Pilih negara…</option>
+                            <option value="US">Amerika Serikat (US)</option>
+                            <option value="GB">Inggris (GB)</option>
+                            <option value="FR">Prancis (FR)</option>
+                            <option value="NL">Belanda (NL)</option>
+                            <option value="TR">Turki (TR)</option>
+                            <option value="PL">Polandia (PL)</option>
+                            <option value="RO">Rumania (RO)</option>
+                            <option value="DE">Jerman (DE)</option>
+                            <option value="ES">Spanyol (ES)</option>
+                            <option value="IT">Italia (IT)</option>
+                        </select>
+                        <p class="field-err" id="err-country"></p>
+                    </div>
+                    <div class="field">
+                        <label for="bin_country">Negara Kartu</label>
+                        <select id="bin_country" name="bin_country" required class="sel">
+                            <option value="">Pilih negara…</option>
+                            <option value="US">Amerika Serikat (US)</option>
+                            <option value="GB">Inggris (GB)</option>
+                            <option value="FR">Prancis (FR)</option>
+                            <option value="NL">Belanda (NL)</option>
+                            <option value="TR">Turki (TR)</option>
+                            <option value="PL">Polandia (PL)</option>
+                            <option value="RO">Rumania (RO)</option>
+                            <option value="DE">Jerman (DE)</option>
+                            <option value="ES">Spanyol (ES)</option>
+                            <option value="IT">Italia (IT)</option>
+                        </select>
+                        <p class="field-err" id="err-bin-country"></p>
+                    </div>
+                </div>
+
+                <div class="grid-2">
+                    <div class="field">
+                        <label>Channel</label>
+                        <div class="radio-group">
+                            <label class="radio-card">
+                                <input type="radio" name="channel" value="web" required>
+                                <span>Web</span>
+                                <span class="rc-check"></span>
+                            </label>
+                            <label class="radio-card">
+                                <input type="radio" name="channel" value="app">
+                                <span>App</span>
+                                <span class="rc-check"></span>
+                            </label>
+                        </div>
+                        <p class="field-err" id="err-channel"></p>
+                    </div>
+                    <div class="field">
+                        <label for="merchant_category">Kategori Toko</label>
+                        <select id="merchant_category" name="merchant_category" required class="sel">
+                            <option value="">Pilih kategori…</option>
+                            <option value="travel">Perjalanan & Wisata</option>
+                            <option value="fashion">Pakaian & Mode</option>
+                            <option value="electronics">Elektronik</option>
+                            <option value="grocery">Kebutuhan Sehari-hari</option>
+                            <option value="gaming">Game & Hiburan</option>
+                        </select>
+                        <p class="field-err" id="err-merchant"></p>
+                    </div>
+                </div>
+
+                <div class="form-section-title">
+                    <i class="ti ti-lock" aria-hidden="true"></i>Verifikasi Keamanan
+                </div>
+
+                <div class="grid-2">
+                    <div class="field">
+                        <label>Pakai Promo?</label>
+                        <div class="radio-group">
+                            <label class="radio-card"><input type="radio" name="promo_used" value="1" required><span>Ya</span><span class="rc-check"></span></label>
+                            <label class="radio-card"><input type="radio" name="promo_used" value="0"><span>Tidak</span><span class="rc-check"></span></label>
+                        </div>
+                        <p class="field-err" id="err-promo"></p>
+                    </div>
+                    <div class="field">
+                        <label>AVS Match?</label>
+                        <div class="radio-group">
+                            <label class="radio-card"><input type="radio" name="avs_match" value="1" required><span>Match</span><span class="rc-check"></span></label>
+                            <label class="radio-card"><input type="radio" name="avs_match" value="0"><span>Tidak</span><span class="rc-check"></span></label>
+                        </div>
+                        <p class="field-err" id="err-avs"></p>
+                    </div>
+                    <div class="field">
+                        <label>Verifikasi CVV?</label>
+                        <div class="radio-group">
+                            <label class="radio-card"><input type="radio" name="cvv_result" value="1" required><span>Berhasil</span><span class="rc-check"></span></label>
+                            <label class="radio-card"><input type="radio" name="cvv_result" value="0"><span>Gagal</span><span class="rc-check"></span></label>
+                        </div>
+                        <p class="field-err" id="err-cvv"></p>
+                    </div>
+                    <div class="field">
+                        <label>3D Secure?</label>
+                        <div class="radio-group">
+                            <label class="radio-card"><input type="radio" name="three_ds_flag" value="1" required><span>Aktif</span><span class="rc-check"></span></label>
+                            <label class="radio-card"><input type="radio" name="three_ds_flag" value="0"><span>Tidak</span><span class="rc-check"></span></label>
+                        </div>
+                        <p class="field-err" id="err-3ds"></p>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-submit" id="btnTransaction">
+                    <span class="btn-inner btn-ready"><i class="ti ti-search" aria-hidden="true"></i>Deteksi Transaksi</span>
+                    <span class="btn-inner btn-loading"><i class="ti ti-loader-2 spin" aria-hidden="true"></i>Menganalisis...</span>
+                </button>
+            </form>
+        </div>
+
+        <!-- STUNTING PANEL -->
+        <div class="tool-panel" id="panel-stunting">
+            <div class="tool-header">
+                <div class="tool-header-icon"><i class="ti ti-baby-carriage" aria-hidden="true"></i></div>
+                <div class="tool-header-text">
+                    <p class="label">Tool 02</p>
+                    <h2>Prediksi Status Gizi Balita</h2>
+                </div>
+            </div>
+
+            <form id="stuntingForm" action="/predict/stunting" method="post" novalidate class="form-body">
+                <div class="field">
+                    <label for="umur">Umur Balita</label>
+                    <div class="input-wrap">
+                        <input type="number" id="umur" name="umur" placeholder="contoh: 24" min="0" max="36" required autocomplete="off">
+                        <span class="input-suffix">bulan</span>
+                    </div>
+                    <p class="field-hint">Rentang umur: 0 – 36 bulan</p>
+                    <p class="field-err" id="err-umur"></p>
+                </div>
+
+                <div class="field">
+                    <label>Jenis Kelamin</label>
+                    <div class="radio-group">
+                        <label class="radio-card"><input type="radio" name="jenis_kelamin" value="laki-laki" required><span>Laki-laki</span><span class="rc-check"></span></label>
+                        <label class="radio-card"><input type="radio" name="jenis_kelamin" value="perempuan"><span>Perempuan</span><span class="rc-check"></span></label>
+                    </div>
+                    <p class="field-err" id="err-gender"></p>
+                </div>
+
+                <div class="field">
+                    <label for="tinggi">Tinggi Badan</label>
+                    <div class="input-wrap">
+                        <input type="number" id="tinggi" name="tinggi" placeholder="contoh: 75.5" step="0.1" min="45" max="110" required autocomplete="off">
+                        <span class="input-suffix">cm</span>
+                    </div>
+                    <p class="field-hint">Rentang tinggi: 45 – 110 cm</p>
+                    <p class="field-err" id="err-tinggi"></p>
+                </div>
+
+                <div class="info-box">
+                    <i class="ti ti-stethoscope" aria-hidden="true"></i>
+                    <p>Prediksi ini hanya untuk screening awal. Untuk diagnosis resmi, konsultasikan ke posyandu, puskesmas, atau dokter anak.</p>
+                </div>
+
+                <button type="submit" class="btn-submit" id="btnStunting">
+                    <span class="btn-inner btn-ready"><i class="ti ti-search" aria-hidden="true"></i>Prediksi Status Gizi</span>
+                    <span class="btn-inner btn-loading"><i class="ti ti-loader-2 spin" aria-hidden="true"></i>Memproses...</span>
+                </button>
+            </form>
+        </div>
+
+        <!-- Result Card — di luar kedua panel agar tampil untuk keduanya -->
+        <div class="result-wrap" id="resultCard" style="display:none;">
+            <div class="result-card" id="resultCardInner">
+                <div class="result-top">
+                    <div class="result-icon" id="resultIconWrap"></div>
+                    <div>
+                        <p class="result-label" id="resultEyebrow">Hasil Prediksi</p>
+                        <p class="result-status" id="resultStatus"></p>
+                    </div>
+                </div>
+                <hr class="result-divider">
+                <p class="result-analysis-title">Analisis</p>
+                <p class="result-text" id="resultKeterangan"></p>
+                <ul class="saran-list" id="resultSaran"></ul>
+            </div>
+        </div>
+
+        {% if prediction_text %}
+        <div class="prediction-text-wrap">
+            <i class="ti ti-activity" aria-hidden="true"></i>
+            <p>{{ prediction_text }}</p>
+        </div>
+        {% endif %}
+    </section>
+</main>
+
+<footer id="contact">
+    <div class="footer-inner">
+        <div>
+            <a href="#home" class="nav-logo">
+                <span class="nav-logo-icon"><i class="ti ti-sparkles" aria-hidden="true"></i></span>
+                AIPredict
+            </a>
+            <p class="footer-desc">Platform prediksi terpadu untuk screening awal transaksi digital dan pertumbuhan balita.</p>
+        </div>
+        <div class="footer-links">
+            <a href="#about">Tentang</a>
+            <a href="#features">Fitur</a>
+            <a href="#tools">Prediksi</a>
+        </div>
+    </div>
+</footer>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
